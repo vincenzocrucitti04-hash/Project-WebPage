@@ -3,7 +3,141 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>MyPortfolio</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Story+Script&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body>
+    <header class="header-container">
+      <!-- Titolo della pagina -->
+      <h1>MyPortfolio</h1>
+
+      <!-- Barra di navigazione -->
+      <div class="nav-container">
+        <nav>
+          <ul>
+            <li>
+                <button type="submit"> <a href="#ChiSono">Chi Sono</a></button>
+              </form>
+            </li>
+            <li>
+                <button type="submit"> <a href="#LeMieFoto">Le Mie Foto</a></button>
+              </form>
+            </li>
+            <li>
+                <button type="submit"> <a href="#HB">Hobby</a></button>
+              </form>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Icone social -->
+      <div class="social-icons">
+        <img
+          src="./loghi/instagram-brands-solid-full.svg"
+          alt="Instagram Logo"
+        />
+        <img src="./loghi/linkedin-brands-solid-full.svg" alt="LinkedIn Logo" />
+        <img src="./loghi/github-brands-solid-full.svg" alt="GitHub Logo" />
+      </div>
+    </header>
+
+    <main>
+      <div class="border">
+        <section class="img-intro">
+          <!-- Descrizione della pagina -->
+          <h2>Benvenuto nel mio portfolio personale!</h2>
+        </section>
+      </div>
+
+      <section class="ChiSono" id="ChiSono">
+        <!-- Sezione "Chi sono" -->
+        <h2>Chi sono</h2>
+
+        <article id="aboutme">
+          <p>
+            Ciao! Sono Vincenzo, ho 21 anni e una delle mie più grandi passioni
+            è la fotografia. Sono sempre stato curioso, e attraverso l'obiettivo
+            riesco a combinare questa curiosità con la voglia di esplorare nuovi
+            mondi. Amo catturare momenti autentici e raccontare storie visive.
+            Oltre alla fotografia, mi piace coltivare altri hobby come
+            viaggiare, scoprire nuove tecnologie e stare a contatto con le
+            persone, sempre alla ricerca di esperienze e stimoli creativi.
+          </p>
+        </article>
+      </section>
+
+      <!-- Sezione "Le mie Foto" -->
+      <h2 id="LeMieFoto">Le mie Foto</h2>
+
+      <section>
+        <article id="mypicture">
+          <img src="./img/2.jpg" alt="Foto 1" />
+          <img src="./img/3.jpg" alt="Foto 2" />
+          <img src="./img/4.jpg" alt="Foto 3" />
+          <img src="./img/5.jpg" alt="Foto 4" />
+          <img src="./img/6.jpg" alt="Foto 5" />
+          <img src="./img/7.jpg" alt="Foto 7" />
+        </article>
+      </section>
+
+      <!-- Sezione "Hobby" -->
+      <h2 id="HB">Altri Hobby</h2>
+
+      <section class="Hobby">
+        <article id="myhobby">
+          <ul>
+            <li>Viaggiare</li>
+            <li>Stare a contatto con le persone</li>
+            <li>Ascoltare musica</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <!-- Sezione "Social" -->
+      <h2>Social</h2>
+
+      <section>
+        <article id="mysocial">
+          <p>
+            Seguimi sui miei social per rimanere aggiornato sulle mie ultime
+            avventure fotografiche e scoprire di più su di me!
+          </p>
+          <div class="social-icons-footer">
+            <a href="https://www.instagram.com/imvinz_04/"
+              ><img
+                src="./loghi/instagram-brands-solid-full.svg"
+                alt="InstagramLink"
+            /></a>
+
+            <a href="github.com/nomegit"
+              ><img src="./loghi/github-brands-solid-full.svg" alt="GitHubLink"
+            /></a>
+
+            <a href="linkedin.com/in/nomelinkedin"
+              ><img
+                src="./loghi/linkedin-brands-solid-full.svg"
+                alt="LinkedInLink"
+            /></a>
+          </div>
+        </article>
+      </section>
+
+      <p>© 2025 MyPortfolio. Tutti i diritti riservati.</p>
+    </footer>
+  </body>
 </html>

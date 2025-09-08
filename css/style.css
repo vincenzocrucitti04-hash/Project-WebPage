@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* HEADER STYLING - La navbar principale */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background-color: #f4dbd8;
+  border: 4px solid #333;
+  min-height: 60px;
+}
+
+/* Logo MyPortfolio */
+.header-container h1 {
+  font-size: 40px;
+  font-weight: normal;
+  color: #333;
+  font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+}
+
+/* Container per la navigazione */
+.nav-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-left: 100px; /* Sposta i pulsanti piÃ¹ al centro */
+}
+
+.nav-container nav ul {
+  display: flex;
+  list-style: none;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-container nav li {
+  margin: 0;
+}
+
+/* Styling dei pulsanti di navigazione */
+.nav-container button {
+  background-color: white;
+  border: 3px solid black;
+  padding: 8px 16px;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.nav-container button:hover {
+  background-color: #d77a70;
+  transform: translateY(-1px);
+}
+
+.nav-container button:active {
+  transform: translateY(0);
+}
+
+/* Icone social */
+.social-icons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* RESTO DEL CONTENUTO */
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.img-intro {
+  background-image: url(../img/1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  border: 4px solid #333;
+}
+
+.img-intro > h2 {
+  padding-left: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 4px solid #333;
+}
+
+main h2 {
+  font-size: 36px;
+  margin: 20px 0;
+  color: #333;
+  font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-top: 20px;
+}
+
+main p {
+  font-size: 20px;
+  color: #555;
+  max-width: 800px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-family: "Epunda Slab", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#mypicture {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+}
+
+#mypicture > img {
+  width: 30rem;
+  height: 40rem;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f4dbd8;
+  border-top: 4px solid #333;
+  font-family: "Epunda Slab", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.social-icons-footer {
+  display: flex;
+  gap: 8px;
+}
+
+.social-icons-footer img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.social-icons-footer img:hover {
+  transform: scale(1.1);
+}
