@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="MyPortfolio" content="Portfolio personale di Vincenzo" />
+    <title>MyPortfolio</title>
+    <link rel="stylesheet" href="./Project-WebPage/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Story+Script&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Skip to main content link per accessibilità -->
+    <a href="#main-content" class="skip-link">Salta al contenuto principale</a>
+
+    <header class="header-container">
+      <!-- Titolo della pagina -->
+      <h1>MyPortfolio</h1>
+
+      <!-- Barra di navigazione -->
+      <nav
+        class="nav-container"
+        role="navigation"
+        aria-label="Navigazione principale"
+      >
+        <ul>
+          <li>
+            <a href="#ChiSono" class="nav-button" aria-describedby="about-desc">
+              <span>AboutMe</span>
+              <span id="about-desc" class="sr-only"
+                >Vai alla sezione chi sono</span
+              >
+            </a>
+          </li>
+          <li>
+            <a
+              href="#LeMieFoto"
+              class="nav-button"
+              aria-describedby="photos-desc"
+            >
+              <span>MyFoto</span>
+              <span id="photos-desc" class="sr-only"
+                >Vai alla galleria fotografica</span
+              >
+            </a>
+          </li>
+          <li>
+            <a href="#HB" class="nav-button" aria-describedby="hobbies-desc">
+              <span>MyHobby</span>
+              <span id="hobbies-desc" class="sr-only"
+                >Vai alla sezione hobby</span
+              >
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Icone social -->
+      <div
+        class="social-icons"
+        role="complementary"
+        aria-label="Link ai social media"
+      >
+        <a
+          href="https://www.instagram.com/imvinz_04/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Seguimi su Instagram (si apre in una nuova finestra)"
+        >
+          <img
+            src="./Project-WebPage/loghi/instagram-brands-solid-full.svg"
+            alt=""
+            role="presentation"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/vincenzo-crucitti-4b5428378/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Collegati su LinkedIn (si apre in una nuova finestra)"
+        >
+          <img
+            src="./Project-WebPage/loghi/linkedin-brands-solid-full.svg"
+            alt=""
+            role="presentation"
+          />
+        </a>
+        <a
+          href="https://github.com/vincenzocrucitti04-hash"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visita il mio GitHub (si apre in una nuova finestra)"
+        >
+          <img
+            src="./Project-WebPage/loghi/github-brands-solid-full.svg"
+            alt=""
+            role="presentation"
+          />
+        </a>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero-section">
+        <div class="img-intro" role="banner">
+          <h2>Benvenuto nel mio portfolio personale!</h2>
+        </div>
+      </section>
+
+      <section class="ChiSono" id="ChiSono" aria-labelledby="chi-sono-heading">
+        <h2 id="chi-sono-heading">Chi sono</h2>
+        <article id="aboutme">
+          <p>
+            Ciao! Sono Vincenzo, ho 21 anni e una delle mie più grandi passioni
+            è la fotografia. Sono sempre stato curioso, e attraverso l'obiettivo
+            riesco a combinare questa curiosità con la voglia di esplorare nuovi
+            mondi. Amo catturare momenti autentici e raccontare storie visive.
+            Oltre alla fotografia, mi piace coltivare altri hobby come
+            viaggiare, scoprire nuove tecnologie e stare a contatto con le
+            persone, sempre alla ricerca di esperienze e stimoli creativi.
+          </p>
+        </article>
+      </section>
+
+      <section id="LeMieFoto" aria-labelledby="foto-heading">
+        <h2 id="foto-heading">Le mie Foto</h2>
+        <article id="mypicture">
+          <img
+            src="./Project-WebPage/img/2.jpg"
+            alt="Fotografia paesaggistica di Vincenzo - Panorama naturale"
+          />
+          <img
+            src="./Project-WebPage/img/3.jpg"
+            alt="Fotografia artistica di Vincenzo - Ritratto creativo"
+          />
+          <img
+            src="./Project-WebPage/img/4.jpg"
+            alt="Fotografia di viaggio di Vincenzo - Architettura urbana"
+          />
+          <img
+            src="./Project-WebPage/img/5.jpg"
+            alt="Fotografia naturalistica di Vincenzo - Dettaglio natura"
+          />
+          <img
+            src="./Project-WebPage/img/6.jpg"
+            alt="Fotografia street di Vincenzo - Vita quotidiana"
+          />
+          <img
+            src="./Project-WebPage/img/7.jpg"
+            alt="Fotografia artistica di Vincenzo - Composizione astratta"
+          />
+        </article>
+      </section>
+
+      <section class="Hobby" id="HB" aria-labelledby="hobby-heading">
+        <h2 id="hobby-heading">Altri Hobby</h2>
+        <article id="myhobby">
+          <ol>
+            <li>
+              <h3>Viaggiare</h3>
+              <p>
+                Una delle mie più grandi passioni per l'appunto è viaggiare.
+                Viaggiare per me indica libertà, senso dell'avventura, scoprire
+                nuovi luoghi e vivere per i pochi giorni in cui resti lì, realtà
+                completamente diverse alle quali sei abituato. Uno dei miei
+                ultimi viaggi è stato a Skiathos, una piccola isola greca, lì ho
+                scoperto un sacco di cose che non sapevo mi piacessero, come ad
+                esempio la cipolla, visto che lì viene usata ovunque, oppure
+                fare dei piccoli trip sulla barca.
+              </p>
+              <blockquote>
+                <p>
+                  "E forse è proprio questo il bello del viaggiare: scoprire non
+                  solo nuovi luoghi, ma parti di noi stessi che non sapevamo
+                  esistessero."
+                </p>
+              </blockquote>
+            </li>
+
+            <li>
+              <h3>Stare a contatto con le persone</h3>
+              <p>
+                È, a mio avviso, un bisogno naturale di ogni essere umano. Per
+                quanto mi riguarda, credo di avere una predisposizione innata:
+                quando mi trovo in mezzo agli altri riesco sempre a dare il
+                meglio di me. Mi piace scherzare, confrontarmi, discutere e
+                condividere momenti che arricchiscono la giornata. Nel 2024 ho
+                avuto la possibilità di svolgere il Servizio Civile e questa
+                esperienza mi ha insegnato che ogni incontro porta con sé una
+                storia, un'emozione e un insegnamento. Condividere il tempo con
+                gli altri, ascoltare e aiutare, anche con piccoli gesti, mi ha
+                fatto capire quanto sia importante creare legami e quanto valore
+                ci sia nello scambio umano. Ogni sorriso ricevuto e ogni parola
+                detta hanno lasciato un segno dentro di me, trasformando un
+                semplice impegno quotidiano in un percorso di crescita
+                personale.
+              </p>
+              <blockquote>
+                <p>
+                  "Perché alla fine, il contatto con le persone non è solo una
+                  parte della vita: è ciò che la rende davvero viva."
+                </p>
+              </blockquote>
+            </li>
+
+            <li>
+              <h3>Ascoltare la musica</h3>
+              <p>
+                Per me è molto più che intrattenimento: è una sorta di yoga
+                personale. È quel momento in cui riesco a fermarmi, a
+                concentrarmi e a rilassarmi davvero. Le note mi aiutano a
+                liberare la mente, a scacciare via paure, timori e pensieri
+                negativi che a volte appesantiscono la giornata. Ogni brano
+                diventa un rifugio, un luogo sicuro dove posso ritrovare me
+                stesso e ricaricare le energie.
+              </p>
+              <blockquote>
+                <p>
+                  "Perché in fondo, la musica non si limita a riempire il
+                  silenzio: è ciò che dà voce alle emozioni che non sappiamo
+                  esprimere."
+                </p>
+              </blockquote>
+            </li>
+          </ol>
+        </article>
+      </section>
+    </main>
+
+    <footer role="contentinfo">
+      <h2>Social</h2>
+      <section>
+        <article id="mysocial">
+          <p>
+            Seguimi sui miei social per rimanere aggiornato sulle mie ultime
+            avventure fotografiche e scoprire di più su di me!
+          </p>
+          <div
+            class="social-icons-footer"
+            role="complementary"
+            aria-label="Link ai social media nel footer"
+          >
+            <a
+              href="https://www.instagram.com/imvinz_04/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Seguimi su Instagram (si apre in una nuova finestra)"
+            >
+              <img
+                src="./Project-WebPage/loghi/instagram-brands-solid-full.svg"
+                alt=""
+                role="presentation"
+              />
+            </a>
+            <a
+              href="https://github.com/vincenzocrucitti04-hash"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visita il mio GitHub (si apre in una nuova finestra)"
+            >
+              <img
+                src="./Project-WebPage/loghi/github-brands-solid-full.svg"
+                alt=""
+                role="presentation"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/vincenzo-crucitti-4b5428378/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Collegati su LinkedIn (si apre in una nuova finestra)"
+            >
+              <img
+                src="./Project-WebPage/loghi/linkedin-brands-solid-full.svg"
+                alt=""
+                role="presentation"
+              />
+            </a>
+          </div>
+        </article>
+      </section>
+      <p>© 2025 MyPortfolio. Tutti i diritti riservati.</p>
+    </footer>
+  </body>
+</html>
