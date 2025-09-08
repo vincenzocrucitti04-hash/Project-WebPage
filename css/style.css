@@ -2,11 +2,51 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Skip link per accessibilità */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #333;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 0 0 4px 4px;
+  z-index: 1000;
+  font-weight: bold;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
+  line-height: 1.5;
+}
+
+/* Miglioramento focus per accessibilità */
+*:focus {
+  outline: 3px solid #0066cc;
+  outline-offset: 2px;
 }
 
 /* HEADER STYLING - La navbar principale */
@@ -36,10 +76,10 @@ body {
   flex: 1;
   display: flex;
   justify-content: center;
-  margin-left: 100px; /* Sposta i pulsanti piÃ¹ al centro */
+  margin-left: 100px;
 }
 
-.nav-container nav ul {
+.nav-container ul {
   display: flex;
   list-style: none;
   gap: 8px;
@@ -47,30 +87,39 @@ body {
   padding: 0;
 }
 
-.nav-container nav li {
+.nav-container li {
   margin: 0;
 }
 
-/* Styling dei pulsanti di navigazione */
-.nav-container button {
+/* Styling dei link di navigazione (sostituiti i button malformati) */
+.nav-button {
+  display: inline-block;
   background-color: white;
   border: 3px solid black;
   padding: 8px 16px;
   font-size: 20px;
-  color: #333;
+  color: #333 !important;
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: "Story Script", sans-serif;
   font-weight: 400;
   font-style: normal;
+  text-decoration: none;
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.nav-container button:hover {
+.nav-button:hover,
+.nav-button:focus {
   background-color: #d77a70;
   transform: translateY(-1px);
+  color: #333 !important;
 }
 
-.nav-container button:active {
+.nav-button:active {
   transform: translateY(0);
 }
 
@@ -79,6 +128,22 @@ body {
   display: flex;
   gap: 8px;
   align-items: center;
+}
+
+.social-icons a {
+  display: inline-block;
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover,
+.social-icons a:focus {
+  background-color: rgba(51, 51, 51, 0.1);
 }
 
 .social-icons img {
@@ -108,10 +173,18 @@ body {
   width: 100vw;
   height: 100vh;
   border: 4px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .img-intro > h2 {
   padding-left: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  margin-left: 20px;
+  color: #333;
 }
 
 main {
@@ -133,7 +206,7 @@ main h2 {
 
 main p {
   font-size: 20px;
-  color: #555;
+  color: #444; /* Migliorato contrasto da #555 a #444 */
   max-width: 800px;
   line-height: 1.6;
   margin-bottom: 20px;
@@ -142,6 +215,7 @@ main p {
   font-style: normal;
 }
 
+/* Miglioramento per le immagini della galleria */
 #mypicture {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -152,6 +226,62 @@ main p {
 #mypicture > img {
   width: 30rem;
   height: 40rem;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  border: 2px solid #ddd;
+}
+
+#mypicture > img:hover,
+#mypicture > img:focus {
+  transform: scale(1.02);
+  border-color: #333;
+}
+
+/* Sezione hobby migliorata */
+#myhobby {
+  font-size: 20px;
+  color: #444; /* Migliorato contrasto */
+  max-width: 800px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-family: "Epunda Slab", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#myhobby ol {
+  padding-left: 20px;
+}
+
+#myhobby li {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1rem;
+}
+
+/* Miglioramento per i titoli degli hobby */
+#myhobby h3 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 1rem;
+  font-family: "Story Script", sans-serif;
+  font-weight: 400;
+}
+
+/* Stile per le citazioni */
+blockquote {
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-left: 4px solid #d77a70;
+  font-style: italic;
+  border-radius: 0 4px 4px 0;
+}
+
+blockquote p {
+  margin: 0;
+  color: #555;
+  font-size: 18px;
 }
 
 footer {
@@ -164,9 +294,35 @@ footer {
   font-style: normal;
 }
 
+footer h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+footer p {
+  color: #444; /* Migliorato contrasto */
+}
+
 .social-icons-footer {
   display: flex;
   gap: 8px;
+  justify-content: center;
+}
+
+.social-icons-footer a {
+  display: inline-block;
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.social-icons-footer a:hover,
+.social-icons-footer a:focus {
+  background-color: rgba(51, 51, 51, 0.1);
 }
 
 .social-icons-footer img {
@@ -178,4 +334,198 @@ footer {
 
 .social-icons-footer img:hover {
   transform: scale(1.1);
+}
+
+/* MEDIA QUERY PER DISPOSITIVI MOBILE */
+@media screen and (max-width: 768px) {
+  /* HEADER STYLING - Adattamento per mobile */
+  .header-container {
+    flex-direction: column;
+    padding: 16px 12px;
+    gap: 16px;
+    min-height: auto;
+  }
+
+  .header-container h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  /* Container per la navigazione */
+  .nav-container {
+    flex: none;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .nav-container ul {
+    flex-direction: row;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .nav-container li {
+    width: 100%;
+  }
+
+  /* Pulsanti di navigazione a larghezza completa */
+  .nav-button {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  /* Icone social nel header */
+  .social-icons {
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .social-icons img {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* CONTENUTO PRINCIPALE */
+  .img-intro {
+    height: 50vh;
+    width: 100vw;
+    align-items: flex-start;
+    padding-top: 2rem;
+  }
+
+  .img-intro > h2 {
+    font-size: 24px;
+    padding: 16px;
+    text-align: center;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  main h2 {
+    font-size: 28px;
+    text-align: center;
+    padding: 16px;
+    margin: 16px 0;
+  }
+
+  main p {
+    font-size: 18px;
+    padding: 0 16px;
+    max-width: none;
+    margin-bottom: 16px;
+  }
+
+  /* SEZIONE CHI SONO */
+  .ChiSono {
+    padding: 0 16px;
+  }
+
+  #aboutme p {
+    text-align: justify;
+    line-height: 1.7;
+  }
+
+  /* GALLERIA FOTOGRAFICA - Da griglia 2x3 a colonna singola */
+  #mypicture {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 16px;
+    padding: 0 16px;
+    margin-bottom: 24px;
+  }
+
+  #mypicture > img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    justify-self: center;
+  }
+
+  /* SEZIONE HOBBY */
+  .Hobby {
+    padding: 0 16px;
+  }
+
+  #myhobby {
+    font-size: 18px;
+    max-width: none;
+    line-height: 1.8;
+    text-align: justify;
+  }
+
+  #myhobby ol {
+    padding-left: 16px;
+  }
+
+  #myhobby li {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  #myhobby h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  blockquote {
+    margin: 1rem 0;
+    padding: 0.8rem;
+  }
+
+  blockquote p {
+    font-size: 16px;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 20px 16px;
+  }
+
+  footer h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  footer p {
+    font-size: 16px;
+    padding: 0;
+    margin-bottom: 16px;
+  }
+
+  .social-icons-footer {
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .social-icons-footer img {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* Copyright */
+  footer > p:last-child {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+
+  /* MIGLIORAMENTI GENERALI PER MOBILE */
+
+  /* Rimuove il bordo laterale per evitare overflow orizzontale */
+  .img-intro {
+    border-left: none;
+    border-right: none;
+  }
+
+  /* Assicura che il contenuto non vada in overflow */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Spazio extra per sezioni */
+  section {
+    margin-bottom: 24px;
+  }
 }
