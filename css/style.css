@@ -1,27 +1,22 @@
+/* 
+=== PALETTE COLORI PORTFOLIO ===
+Primario (Blu Elegante): #2C3E50 (testi principali)
+Secondario (Blu Scuro): #1A252F (bordi e accenti)
+Accent (Coral Moderno): #FF6B6B (hover e highlight)
+Background Chiaro: #F8F9FA (sfondo principale)
+Background Scuro: #ECEFF1 (sezioni alternate)
+Testo Scuro: #2C3E50 (alta leggibilità)
+Testo Medio: #34495E (testi secondari)
+Bianco: #FFFFFF (contrasti)
+Success: #27AE60 (elementi positivi)
+*/
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: inherit;
   text-decoration: none;
-}
-
-/* Skip link per accessibilità */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 6px;
-  background: #333;
-  color: white;
-  padding: 8px;
-  text-decoration: none;
-  border-radius: 0 0 4px 4px;
-  z-index: 1000;
-  font-weight: bold;
-}
-
-.skip-link:focus {
-  top: 0;
 }
 
 /* Screen reader only content */
@@ -38,14 +33,15 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  line-height: 1.5;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  line-height: 1.6;
+  color: #2c3e50;
 }
 
 /* Miglioramento focus per accessibilità */
 *:focus {
-  outline: 3px solid #0066cc;
+  outline: 3px solid #ff6b6b;
   outline-offset: 2px;
 }
 
@@ -54,21 +50,23 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 24px;
-  background-color: #f4dbd8;
-  border: 4px solid #333;
-  min-height: 60px;
+  padding: 16px 32px;
+  background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+  border-bottom: 4px solid #ff6b6b;
+  min-height: 80px;
+  box-shadow: 0 4px 20px rgba(44, 62, 80, 0.15);
 }
 
 /* Logo MyPortfolio */
 .header-container h1 {
-  font-size: 40px;
+  font-size: 42px;
   font-weight: normal;
-  color: #333;
-  font-family: "Story Script", sans-serif;
+  color: #ffffff;
+  font-family: "Story Script", serif;
   font-weight: 400;
   font-style: normal;
   margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Container per la navigazione */
@@ -82,7 +80,7 @@ body {
 .nav-container ul {
   display: flex;
   list-style: none;
-  gap: 8px;
+  gap: 12px;
   margin: 0;
   padding: 0;
 }
@@ -91,32 +89,35 @@ body {
   margin: 0;
 }
 
-/* Styling dei link di navigazione (sostituiti i button malformati) */
+/* Styling dei link di navigazione */
 .nav-button {
   display: inline-block;
-  background-color: white;
-  border: 3px solid black;
-  padding: 8px 16px;
-  font-size: 20px;
-  color: #333 !important;
+  background-color: #ffffff;
+  border: 2px solid #ff6b6b;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 18px;
+  color: #2c3e50 !important;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-family: "Story Script", sans-serif;
+  font-family: "Story Script", serif;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
-  min-height: 44px;
-  min-width: 44px;
+  min-height: 48px;
+  min-width: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 2px 8px rgba(255, 107, 107, 0.2);
 }
 
 .nav-button:hover,
 .nav-button:focus {
-  background-color: #d77a70;
-  transform: translateY(-1px);
-  color: #333 !important;
+  background-color: #ff6b6b;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
 }
 
 .nav-button:active {
@@ -126,43 +127,41 @@ body {
 /* Icone social */
 .social-icons {
   display: flex;
-  gap: 8px;
+  gap: 12px;
   align-items: center;
 }
 
 .social-icons a {
   display: inline-block;
-  min-height: 44px;
-  min-width: 44px;
+  min-height: 48px;
+  min-width: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .social-icons a:hover,
 .social-icons a:focus {
-  background-color: rgba(51, 51, 51, 0.1);
+  background-color: #ff6b6b;
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
 }
 
 .social-icons img {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   cursor: pointer;
   transition: transform 0.3s ease;
+  filter: brightness(0) invert(1); /* Rende le icone bianche */
 }
 
-.social-icons img:hover {
-  transform: scale(1.1);
-}
-
-/* RESTO DEL CONTENUTO */
-.description {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+/* Hero Section */
+.hero-section {
+  position: relative;
 }
 
 .img-intro {
@@ -172,186 +171,300 @@ body {
   background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
-  border: 4px solid #333;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  position: relative;
+}
+
+.img-intro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(44, 62, 80, 0.4);
+  z-index: 1;
 }
 
 .img-intro > h2 {
-  padding-left: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 20px;
-  border-radius: 8px;
-  margin-left: 20px;
-  color: #333;
+  position: relative;
+  z-index: 2;
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  margin-left: 40px;
+  color: #2c3e50;
+  font-size: 28px;
+  font-weight: 500;
+  box-shadow: 0 8px 32px rgba(44, 62, 80, 0.2);
+  border-left: 4px solid #ff6b6b;
 }
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-bottom: 4px solid #333;
 }
 
 main h2 {
-  font-size: 36px;
-  margin: 20px 0;
-  color: #333;
-  font-family: "Story Script", sans-serif;
+  font-size: 42px;
+  margin: 40px 0 20px 0;
+  color: #2c3e50;
+  font-family: "Story Script", serif;
   font-weight: 400;
   font-style: normal;
   padding-top: 20px;
+  text-align: center;
+  position: relative;
+}
+
+main h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+  border-radius: 2px;
 }
 
 main p {
-  font-size: 20px;
-  color: #444; /* Migliorato contrasto da #555 a #444 */
-  max-width: 800px;
-  line-height: 1.6;
-  margin-bottom: 20px;
+  font-size: 18px;
+  color: #34495e;
+  max-width: 900px;
+  line-height: 1.8;
+  margin-bottom: 24px;
   font-family: "Epunda Slab", serif;
   font-weight: 400;
   font-style: normal;
+  text-align: justify;
 }
 
-/* Miglioramento per le immagini della galleria */
+#aboutme {
+  display: flex;
+  justify-content: center;
+}
+
+/* Sezioni con background alternati */
+.ChiSono {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 60px 40px;
+  box-shadow: 0 2px 20px rgba(44, 62, 80, 0.1);
+}
+
+#LeMieFoto {
+  background-color: #eceff1;
+  width: 100%;
+  padding: 60px 40px;
+}
+
+.Hobby {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 60px 40px;
+  box-shadow: 0 2px 20px rgba(44, 62, 80, 0.1);
+}
+
+/* Galleria fotografica migliorata */
 #mypicture {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 20px;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 #mypicture > img {
-  width: 30rem;
-  height: 40rem;
+  width: 100%;
+  max-width: 400px;
+  height: 500px;
   object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-  border: 2px solid #ddd;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border: 3px solid #ffffff;
+  box-shadow: 0 8px 25px rgba(44, 62, 80, 0.15);
+  justify-self: center;
 }
 
 #mypicture > img:hover,
 #mypicture > img:focus {
-  transform: scale(1.02);
-  border-color: #333;
+  transform: scale(1.05) translateY(-8px);
+  box-shadow: 0 15px 35px rgba(44, 62, 80, 0.25);
+  border-color: #ff6b6b;
 }
 
 /* Sezione hobby migliorata */
 #myhobby {
-  font-size: 20px;
-  color: #444; /* Migliorato contrasto */
-  max-width: 800px;
+  font-size: 18px;
+  color: #34495e;
+  max-width: 900px;
   line-height: 1.8;
-  margin-bottom: 20px;
+  margin: 0 auto 24px auto;
   font-family: "Epunda Slab", serif;
   font-weight: 400;
   font-style: normal;
 }
 
 #myhobby ol {
-  padding-left: 20px;
+  padding-left: 24px;
 }
 
 #myhobby li {
-  margin-bottom: 2.5rem;
-  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  border-left: 5px solid #ff6b6b;
+  box-shadow: 0 4px 20px rgba(44, 62, 80, 0.1);
+  transition: all 0.3s ease;
 }
 
-/* Miglioramento per i titoli degli hobby */
+#myhobby li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(44, 62, 80, 0.15);
+}
+
+/* Titoli degli hobby */
 #myhobby h3 {
-  color: #333;
-  font-size: 24px;
-  margin-bottom: 1rem;
-  font-family: "Story Script", sans-serif;
-  font-weight: 400;
+  color: #2c3e50;
+  font-size: 26px;
+  margin-bottom: 16px;
+  font-family: "Story Script", serif;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 8px;
 }
 
-/* Stile per le citazioni */
+#myhobby h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: #ff6b6b;
+  border-radius: 1px;
+}
+
+/* Stile per le citazioni migliorato */
 blockquote {
-  margin: 1rem 0;
-  padding: 1rem;
-  background-color: #f9f9f9;
-  border-left: 4px solid #d77a70;
+  margin: 24px 0;
+  padding: 20px 24px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #eceff1 100%);
+  border-left: 4px solid #27ae60;
   font-style: italic;
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 12px 12px 0;
+  box-shadow: 0 4px 15px rgba(44, 62, 80, 0.08);
+  position: relative;
+}
+
+blockquote::before {
+  content: '"';
+  position: absolute;
+  top: -5px;
+  left: 10px;
+  font-size: 48px;
+  color: #27ae60;
+  opacity: 0.3;
 }
 
 blockquote p {
   margin: 0;
-  color: #555;
-  font-size: 18px;
+  color: #34495e;
+  font-size: 16px;
+  font-weight: 500;
+  padding-left: 20px;
 }
 
+/* Footer migliorato */
 footer {
   text-align: center;
-  padding: 20px;
-  background-color: #f4dbd8;
-  border-top: 4px solid #333;
+  padding: 50px 40px;
+  background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+  color: #ffffff;
   font-family: "Epunda Slab", serif;
   font-weight: 400;
   font-style: normal;
+  border-top: 4px solid #ff6b6b;
 }
 
 footer h2 {
-  color: #333;
-  margin-bottom: 1rem;
+  color: #ffffff;
+  margin-bottom: 24px;
+  font-size: 28px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 footer p {
-  color: #444; /* Migliorato contrasto */
+  color: #eceff1;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+footer > p:last-child {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
 }
 
 .social-icons-footer {
   display: flex;
-  gap: 8px;
+  gap: 16px;
   justify-content: center;
+  margin: 24px 0;
 }
 
 .social-icons-footer a {
   display: inline-block;
-  min-height: 44px;
-  min-width: 44px;
+  min-height: 52px;
+  min-width: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .social-icons-footer a:hover,
 .social-icons-footer a:focus {
-  background-color: rgba(51, 51, 51, 0.1);
+  background-color: #ff6b6b;
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
 }
 
 .social-icons-footer img {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
   transition: transform 0.3s ease;
-}
-
-.social-icons-footer img:hover {
-  transform: scale(1.1);
+  filter: brightness(0) invert(1);
 }
 
 /* MEDIA QUERY PER DISPOSITIVI MOBILE */
 @media screen and (max-width: 768px) {
-  /* HEADER STYLING - Adattamento per mobile */
   .header-container {
     flex-direction: column;
-    padding: 16px 12px;
-    gap: 16px;
+    padding: 20px 16px;
+    gap: 20px;
     min-height: auto;
   }
 
   .header-container h1 {
-    font-size: 32px;
+    font-size: 36px;
     text-align: center;
   }
 
-  /* Container per la navigazione */
   .nav-container {
     flex: none;
     margin-left: 0;
@@ -359,7 +472,7 @@ footer p {
   }
 
   .nav-container ul {
-    flex-direction: row;
+    flex-direction: column;
     gap: 12px;
     width: 100%;
   }
@@ -368,164 +481,99 @@ footer p {
     width: 100%;
   }
 
-  /* Pulsanti di navigazione a larghezza completa */
   .nav-button {
     width: 100%;
-    padding: 12px 16px;
+    padding: 16px 20px;
     font-size: 18px;
     text-align: center;
   }
 
-  /* Icone social nel header */
   .social-icons {
     justify-content: center;
-    gap: 16px;
+    gap: 20px;
   }
 
-  .social-icons img {
-    width: 28px;
-    height: 28px;
-  }
-
-  /* CONTENUTO PRINCIPALE */
   .img-intro {
-    height: 50vh;
-    width: 100vw;
+    height: 60vh;
     align-items: flex-start;
     padding-top: 2rem;
   }
 
   .img-intro > h2 {
-    font-size: 24px;
-    padding: 16px;
-    text-align: center;
-    margin-left: 16px;
-    margin-right: 16px;
+    font-size: 22px;
+    padding: 24px;
+    margin: 0 20px;
+  }
+
+  .ChiSono,
+  #LeMieFoto,
+  .Hobby {
+    padding: 40px 20px;
   }
 
   main h2 {
-    font-size: 28px;
-    text-align: center;
-    padding: 16px;
-    margin: 16px 0;
+    font-size: 32px;
+    margin: 30px 0 20px 0;
   }
 
   main p {
-    font-size: 18px;
+    font-size: 16px;
     padding: 0 16px;
     max-width: none;
-    margin-bottom: 16px;
   }
 
-  /* SEZIONE CHI SONO */
-  .ChiSono {
-    padding: 0 16px;
-  }
-
-  #aboutme p {
-    text-align: justify;
-    line-height: 1.7;
-  }
-
-  /* GALLERIA FOTOGRAFICA - Da griglia 2x3 a colonna singola */
   #mypicture {
-    display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 16px;
+    gap: 20px;
     padding: 0 16px;
-    margin-bottom: 24px;
   }
 
   #mypicture > img {
-    width: 100%;
     height: auto;
-    max-width: 400px;
-    justify-self: center;
-  }
-
-  /* SEZIONE HOBBY */
-  .Hobby {
-    padding: 0 16px;
+    max-width: 350px;
   }
 
   #myhobby {
-    font-size: 18px;
+    font-size: 16px;
     max-width: none;
-    line-height: 1.8;
-    text-align: justify;
-  }
-
-  #myhobby ol {
-    padding-left: 16px;
+    padding: 0 16px;
   }
 
   #myhobby li {
+    padding: 24px 20px;
     margin-bottom: 2rem;
-    padding-bottom: 1rem;
   }
 
   #myhobby h3 {
     font-size: 22px;
-    margin-bottom: 8px;
   }
 
   blockquote {
-    margin: 1rem 0;
-    padding: 0.8rem;
+    margin: 16px 0;
+    padding: 16px 20px;
   }
 
   blockquote p {
-    font-size: 16px;
+    font-size: 14px;
   }
 
-  /* FOOTER */
   footer {
-    padding: 20px 16px;
+    padding: 40px 20px;
   }
 
   footer h2 {
     font-size: 24px;
-    margin-bottom: 16px;
-  }
-
-  footer p {
-    font-size: 16px;
-    padding: 0;
-    margin-bottom: 16px;
   }
 
   .social-icons-footer {
-    gap: 16px;
-    margin-bottom: 16px;
+    gap: 20px;
   }
 
-  .social-icons-footer img {
-    width: 36px;
-    height: 36px;
-  }
-
-  /* Copyright */
-  footer > p:last-child {
-    font-size: 14px;
-    margin-bottom: 0;
-  }
-
-  /* MIGLIORAMENTI GENERALI PER MOBILE */
-
-  /* Rimuove il bordo laterale per evitare overflow orizzontale */
-  .img-intro {
-    border-left: none;
-    border-right: none;
-  }
-
-  /* Assicura che il contenuto non vada in overflow */
   body {
     overflow-x: hidden;
   }
 
-  /* Spazio extra per sezioni */
   section {
-    margin-bottom: 24px;
+    margin-bottom: 0;
   }
 }
