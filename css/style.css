@@ -184,7 +184,6 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(44, 62, 80, 0.4);
   z-index: 1;
 }
 
@@ -242,7 +241,6 @@ main p {
   font-family: "Epunda Slab", serif;
   font-weight: 400;
   font-style: normal;
-  text-align: justify;
 }
 
 #aboutme {
