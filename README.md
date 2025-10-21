@@ -32,10 +32,18 @@ Project-WebPage/
 ├── index.html
 ├── css/
 │   └── style.css
-├── js/
-│   └── script.js
-└── assets/
-    └── images/
+├── loghi/
+│   └── github-brands-solid-full.svg
+│   └── instagram-brands-solid-full.svg
+│   └── linkedin-brands-solid-full.svg
+└── img/
+    └── 1.jpg/
+    └── 2.jpg/
+    └── 3.jpg/
+    └── 4.jpg/
+    └── 5.jpg/
+    └── 6.jpg/
+    └── 7.jpg/
 ```
 
 
