@@ -36,6 +36,11 @@ body {
 .header-container {
   display: flex;
   align-items: center;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
   justify-content: space-between;
   padding: 16px 32px;
   background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
@@ -567,7 +572,7 @@ footer > p:last-child {
   .header-container {
     flex-direction: column;
     padding: 20px 16px;
-    gap: 20px;
+    gap: 5px;
     min-height: auto;
   }
 
@@ -583,9 +588,10 @@ footer > p:last-child {
   }
 
   .nav-container ul {
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
+    gap: 9px;
+    width: 25%;
+    display: flex;
+    justify-content: center;
   }
 
   .nav-container li {
@@ -603,6 +609,7 @@ footer > p:last-child {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    margin-top: 6px;
   }
 
   /* Hero Section */
@@ -769,10 +776,22 @@ footer > p:last-child {
   }
 }
 
+@media only screen and (width: 375px) and (height: 667px) {
+  .hero-section {
+    margin-top: 80px;
+  }
+}
+
+@media only screen and (width: 360px) and (height: 740px) {
+  .hero-section {
+    margin-top: 80px;
+  }
+}
+
 /* MEDIA QUERY PER TABLET */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .header-container {
-    padding: 16px 24px;
+    padding: 16px;
   }
 
   .nav-container {
